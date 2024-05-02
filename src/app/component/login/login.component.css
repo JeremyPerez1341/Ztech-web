@@ -1,0 +1,43 @@
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Alinea el texto dentro del contenedor */
+  max-width: 400px; /* Opcional: Define un ancho máximo para el contenedor de login */
+  margin: 0 auto; /* Centra el contenedor login horizontalmente */
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.input-data {
+  width: 100%;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

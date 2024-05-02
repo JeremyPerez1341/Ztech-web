@@ -1,0 +1,33 @@
+<body>
+    <mat-toolbar style="background-color: #363636;">
+        <mat-toolbar-row class="navigation-links">
+            <img src="../../../assets/company/Logo-bar.png" alt="Img logo bar">
+            <span class="name">ZTECH</span>
+            <span class="example-spacer"></span>
+            <span class="navigation-link">Macetas</span>
+            <span class="navigation-link">Añadir</span>
+            <span class="navigation-link">Plantas</span>
+            <span class="navigation-link">Perfil</span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="color: white;">
+                <mat-icon>notifications</mat-icon>
+            </button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <img src="../../../assets/company/Perfil-Profesional.png" alt="Img profile" class="profile-image">
+            <span class="name">Pedro Perez</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="container">
+        <div class="cards-container">
+            <mat-card *ngFor="let maceta of macetas">
+                <img mat-card-image [src]="maceta.imagenUrl" alt="Imagen de {{ maceta.nombre }}">
+                <mat-card-header>
+                    <div mat-card-title>{{ maceta.nombre }}</div>
+                </mat-card-header>
+                <mat-card-content style="display: flex; justify-content: space-between;">
+                    <app-card-icons [temperatura]="maceta.temperatura" [humedad]="maceta.humedad" [luzSolar]="maceta.luzSolar"></app-card-icons>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</body>

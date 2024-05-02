@@ -1,0 +1,78 @@
+<body>
+    <div class="general">
+        <div class="login">
+            <div class="logo">
+                <img src="../../../assets/company/Logo ztech sin fondo 2.png" alt="Logo">
+            </div>
+            <div *ngIf="!isForgotPasswordView">
+                <div class="form">
+                    <div style="margin-bottom: 18px;">
+                        <p style="font-size: 32px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">
+                            Ingresa a tu cuenta
+                        </p>
+                    </div>
+                    <div class="input-data">
+                        <mat-form-field appearance="fill" class="input-data">
+                            <mat-label>Correo</mat-label>
+                            <input matInput placeholder="">
+                            <mat-icon matSuffix>mail</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="input-data">
+                        <mat-form-field appearance="fill" class="input-data">
+                            <mat-label>Contraseña</mat-label>
+                            <input matInput #passwordInput placeholder="" type="password">
+                            <button mat-icon-button matSuffix (click)="togglePasswordVisibility(passwordInput)" [attr.aria-label]="'Toggle password visibility'">
+                              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                          </button>
+                        </mat-form-field>
+                    </div>
+                    <div style="margin-top: -15px;">
+                        <section class="example-section">
+                            <mat-checkbox class="example-margin">Recuérdame</mat-checkbox>
+                        </section>
+                    </div>
+                </div>
+                <div>
+                    <button mat-raised-button style="margin-top: 15px; margin-bottom: 30px; width: 100%; background-color: #276749; color: white; height: 56px; font-size: 16px;" [routerLink]="['/home']">Ingresa</button>
+                </div>
+                <div class="option">
+                    <p style="color: #565656;">
+                        ¿No recuerdas tu contraseña?<br>
+                        <a style="color: #276749;display: flex; justify-content: center; margin-bottom: 25px;" (click)="toggleForgotPasswordView()" [routerLink]= "['']">Ingresa Aquí</a>
+                    </p>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="option">
+                    <p style="color: #565656;">¿Ya tienes una cuenta? <a style="color: #276749;" [routerLink]= "['/register']">Ingresa Aquí</a></p>
+                </div>
+            </div>
+            <div *ngIf="isForgotPasswordView">
+                <div class="form">
+                    <div style="margin-bottom: 18px;">
+                        <p style="font-size: 32px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">
+                            Recupera tu contraseña
+                        </p>
+                        <p style="font-size: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                            Ingresa tu correo electrónico para enviarte un mail y puedas cambiar tu contraseña
+                        </p>
+                    </div>
+                    <div class="input-data">
+                        <mat-form-field appearance="fill" class="input-data">
+                            <mat-label>Correo</mat-label>
+                            <input matInput placeholder="">
+                            <mat-icon matSuffix>mail</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <button mat-raised-button style="margin-top: 15px; margin-bottom: 30px; width: 100%; background-color: #276749; color: white; height: 56px; font-size: 16px;">Enviar mail</button>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="option">
+                    <a style="color: #276749;" (click)="toggleForgotPasswordView()" [routerLink]= "['']">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

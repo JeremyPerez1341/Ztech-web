@@ -1,0 +1,33 @@
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.input-data {
+  width: 100%;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

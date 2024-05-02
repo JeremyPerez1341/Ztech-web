@@ -1,0 +1,60 @@
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .name {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .favorite-icon {
+    color: white;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajustar el relleno según sea necesario */
+    margin-right: auto; /* Empujar hacia la izquierda para alinear a la izquierda */
+  }
+  
+  .navigation-link {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0 10px; /* Añadir relleno horizontal para separar los enlaces */
+  }
+
+.navigation-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Opcional: ajusta la altura según sea necesario */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+mat-card {
+  width: 300px; /* Ancho deseado para cada tarjeta */
+}
